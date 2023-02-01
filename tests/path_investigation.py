@@ -34,6 +34,13 @@ class MyTestCase(unittest.TestCase):
     hello_world()
     self.assertEqual(True, True)  # add assertion here
 
+  # added init in a... didnt do anything
+  # https://stackoverflow.com/questions/1260792/import-a-file-from-a-subdirectory
+  # workspace file?
+  def test_a_init(self):
+    from b.b1 import hello_world
+    self.assertEqual(True, True)  # add assertion here
+
   def test_sites(self):
     # https: // stackoverflow.com / questions / 918154 / relative - paths - in -python
     # https: // stackoverflow.com / questions / 9554087 / setting - an - environment - variable - in -virtualenv
@@ -64,7 +71,16 @@ class MyTestCase(unittest.TestCase):
   # seems easier
   # pyvenv.cfg?
 
-  # pip install --editable
+  # pip install --editable a # need setup.py
+  # need name, version, url...
+  # difference between Dist and Packages
+  # pip install --editable --file-links file://~/PycharmProjects/py3-folder-path/a # doesnt work evn with full path
+  # pip install --editable --file-links a
+  # pip uninstall a
+
+  # https://virtualenvwrapper.readthedocs.io/en/latest/
+  # virtualenvwrapper
+  # https://stackoverflow.com/questions/9554087/setting-an-environment-variable-in-virtualenv
 
 
 
