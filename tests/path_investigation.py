@@ -82,6 +82,15 @@ class MyTestCase(unittest.TestCase):
   # virtualenvwrapper
   # https://stackoverflow.com/questions/9554087/setting-an-environment-variable-in-virtualenv
 
+  def test_virt_env(self):
+    import re
+    PYTHONPATH = os.environ.get("PYTHONPATH")
+
+    print('py:', PYTHONPATH) # doesnt search... when added to venv? why
+    print('py:', re.search('/py3-folder-path/a', PYTHONPATH))
+    # from a.b.b1 import hello_world
+    from b.b1 import hello_world # add to sources in python project struct
+    hello_world()
 
 
 if __name__ == '__main__':
