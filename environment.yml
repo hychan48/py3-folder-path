@@ -1,0 +1,7 @@
+name: py3-folder-path
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - poetry
+prefix: /Users/jasonchan/miniforge3/envs/py3-folder-path
